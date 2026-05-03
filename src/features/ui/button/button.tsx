@@ -1,4 +1,5 @@
 import { Component } from 'react';
+
 import type { ButtonProps } from './button.types';
 
 class Button extends Component<ButtonProps> {
