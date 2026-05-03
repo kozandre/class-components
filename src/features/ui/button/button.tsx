@@ -1,12 +1,5 @@
 import { Component } from 'react';
-
-interface ButtonProps {
-  text?: string;
-  onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-  disabled?: boolean;
-  className?: string;
-}
+import type { ButtonProps } from './button.types';
 
 class Button extends Component<ButtonProps> {
   render() {
