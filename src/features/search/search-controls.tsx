@@ -2,10 +2,11 @@ import { Component } from 'react';
 
 import SearchInput from './search-input';
 
+import { searchStorage } from '../services/storage/search-storage';
+
 import Button from '../ui/button/button';
 
 import type { SearchControlsProps, SearchControlsState } from './search.types';
-import { searchStorage } from '../services/storage/search-storage';
 
 class SearchControls extends Component<
   SearchControlsProps,

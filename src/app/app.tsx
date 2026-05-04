@@ -1,10 +1,10 @@
 import { Component } from 'react';
 
-import ErrorBoundary from '../features/error-handling/error-boundary';
+import ErrorBoundary from '@features/error-handling/error-boundary';
 
-import FallbackUI from '../features/error-handling/fallback-ui';
+import FallbackUI from '@features/error-handling/fallback-ui';
 
-import Home from '../pages/home';
+import Home from '@pages/home';
 
 class App extends Component {
   handleGlobalError = (error: Error, errorInfo: React.ErrorInfo) => {

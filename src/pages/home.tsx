@@ -1,14 +1,14 @@
 import { Component } from 'react';
 
-import ErrorTestButton from '../features/error-handling/error-test-button';
+import ErrorTestButton from '@features/error-handling/error-test-button';
 
-import ResultsSection from '../features/results/results-section';
+import ResultsSection from '@features/results/results-section';
 
-import SearchControls from '../features/search/search-controls';
+import SearchControls from '@features/search/search-controls';
 
-import { searchStorage } from '../features/services/storage/search-storage';
+import { itemsApi } from '@features/services/api/items-api';
 
-import { itemsApi } from '../features/services/api/items-api';
+import { searchStorage } from '@features/services/storage/search-storage';
 
 import type { HomePageState } from './home.types';
 
