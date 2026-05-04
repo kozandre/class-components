@@ -1,12 +1,12 @@
 import { Component } from 'react';
 
-import Button from '../ui/button/button';
-
 import SearchInput from './search-input';
+
+import Button from '../ui/button/button';
 
 import type { SearchControlsState } from './search.types';
 
-class SearchControls extends Component<{}, SearchControlsState> {
+class SearchControls extends Component<object, SearchControlsState> {
   state = {
     searchValue: '',
   };
