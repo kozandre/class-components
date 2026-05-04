@@ -1,8 +1,8 @@
 import { Component } from 'react';
 
-import type { ItemListProps } from './item.types';
-
 import ItemCard from './item-card';
+
+import type { ItemListProps } from './item.types';
 
 class ItemList extends Component<ItemListProps> {
   render() {
