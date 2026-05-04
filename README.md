@@ -1,73 +1,43 @@
-# React + TypeScript + Vite
+# Star Wars Explorer - Class Components Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project I tried to use new tools for me such as Tailwind CSS and tried to implement Featured-based folder structure (will be improved in the future). This project uses the Star Wars API (SWAPI):
 
-Currently, two official plugins are available:
+Endpoint: https://swapi.dev/api/people/
+Search: https://swapi.dev/api/people/?search={term}
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📋 Project Description
 
-## React Compiler
+Star Wars Explorer is a React application built with **class components** (no hooks!) that allows users to search for Star Wars characters. The application implements search functionality with localStorage persistence, loading states, error handling, and an error boundary for graceful failure recovery.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **React 19** - Class components only (no hooks)
+- **TypeScript** - Strict type checking, no `any` usage
+- **TailwindCSS** - Utility-first styling
+- **Vite** - Fast build tool and dev server
+- **ESLint + Prettier + Husky** - Code quality and formatting
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js (v18 or higher)
+- npm or yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+### Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+# 1. Clone the repository
+git clone https://github.com/kozandre/class-components.git
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+# 2. Navigate to project
+cd class-components
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+# 3. Install dependencies
+npm install
+
+# 4. Start development server
+npm run dev
+
+# 5. Open browser at http://localhost:5173
 ```

@@ -1,5 +1,3 @@
-import { Component } from 'react';
-
 import ErrorTestButton from '@features/error-handling/error-test-button';
 
 import ResultsSection from '@features/results/results-section';
@@ -9,6 +7,8 @@ import SearchControls from '@features/search/search-controls';
 import { itemsApi } from '@features/services/api/items-api';
 
 import { searchStorage } from '@features/services/storage/search-storage';
+
+import { Component } from 'react';
 
 import type { HomePageState } from './home.types';
 
