@@ -11,4 +11,10 @@ export interface SearchIconProps {
 
 export interface SearchControlsState {
   searchValue: string;
+  isSearching: boolean;
+}
+
+export interface SearchControlsProps {
+  onSearch: (term: string) => void;
+  initialSearchTerm?: string;
 }

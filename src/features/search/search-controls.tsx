@@ -4,12 +4,19 @@ import SearchInput from './search-input';
 
 import Button from '../ui/button/button';
 
-import type { SearchControlsState } from './search.types';
+import type { SearchControlsProps, SearchControlsState } from './search.types';
 
-class SearchControls extends Component<object, SearchControlsState> {
-  state = {
-    searchValue: '',
-  };
+class SearchControls extends Component<
+  SearchControlsProps,
+  SearchControlsState
+> {
+  constructor(props: SearchControlsProps) {
+    super(props);
+    this.state = {
+      searchValue: props.initialSearchTerm || '',
+      isSearching: false,
+    };
+  }
 
   handleSearchChange = (value: string) => {
     this.setState({ searchValue: value });
@@ -17,7 +24,11 @@ class SearchControls extends Component<object, SearchControlsState> {
 
   handleSearch = () => {
     const trimmedValue = this.state.searchValue.trim();
-    console.log(trimmedValue);
+    if (trimmedValue) {
+      this.setState({ isSearching: true });
+      this.props.onSearch(trimmedValue);
+      this.setState({ isSearching: false });
+    }
   };
 
   render() {
@@ -30,7 +41,11 @@ class SearchControls extends Component<object, SearchControlsState> {
             onSearch={this.handleSearch}
             placeholder="e.g., Luke Skywalker, Darth Vader..."
           />
-          <Button text="Search" onClick={this.handleSearch} />
+          <Button
+            text={'Search'}
+            onClick={this.handleSearch}
+            disabled={this.state.isSearching}
+          />
         </div>
       </div>
     );
