@@ -7,3 +7,7 @@ interface Item {
 export interface ItemCardProps {
   item: Item;
 }
+
+export interface ItemListProps {
+  items: Item[];
+}
