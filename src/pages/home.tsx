@@ -1,5 +1,7 @@
 import { Component } from 'react';
 
+import ErrorTestButton from '../features/error-handling/error-test-button';
+
 import ResultsSection from '../features/results/results-section';
 
 import SearchControls from '../features/search/search-controls';
@@ -60,6 +62,10 @@ class Home extends Component<object, HomePageState> {
             loading={this.state.loading}
             error={this.state.error}
           />
+
+          <div className="mt-8 flex justify-center">
+            <ErrorTestButton />
+          </div>
         </div>
       </div>
     );
