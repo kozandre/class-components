@@ -2,7 +2,7 @@ import apiClient from './api-client';
 
 import type { SwapiPerson, SwapiResponse } from './api.types';
 
-import type { Item } from '../items/item.types';
+import type { Item } from '../../items/item.types';
 
 export const itemsApi = {
   async getAll(): Promise<Item[]> {

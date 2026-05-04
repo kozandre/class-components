@@ -5,6 +5,7 @@ import SearchInput from './search-input';
 import Button from '../ui/button/button';
 
 import type { SearchControlsProps, SearchControlsState } from './search.types';
+import { searchStorage } from '../services/storage/search-storage';
 
 class SearchControls extends Component<
   SearchControlsProps,
@@ -12,8 +13,11 @@ class SearchControls extends Component<
 > {
   constructor(props: SearchControlsProps) {
     super(props);
+
+    const savedTerm = searchStorage.get();
+
     this.state = {
-      searchValue: props.initialSearchTerm || '',
+      searchValue: savedTerm || '',
       isSearching: false,
     };
   }
@@ -25,6 +29,12 @@ class SearchControls extends Component<
   handleSearch = () => {
     const trimmedValue = this.state.searchValue.trim();
     if (trimmedValue) {
+      const savedTerm = searchStorage.get();
+
+      if (trimmedValue !== savedTerm) {
+        searchStorage.save(trimmedValue);
+      }
+
       this.setState({ isSearching: true });
       this.props.onSearch(trimmedValue);
       this.setState({ isSearching: false });

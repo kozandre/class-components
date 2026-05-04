@@ -6,7 +6,9 @@ import ResultsSection from '../features/results/results-section';
 
 import SearchControls from '../features/search/search-controls';
 
-import { itemsApi } from '../features/services/items-api';
+import { searchStorage } from '../features/services/storage/search-storage';
+
+import { itemsApi } from '../features/services/api/items-api';
 
 import type { HomePageState } from './home.types';
 
@@ -15,13 +17,21 @@ class Home extends Component<object, HomePageState> {
     items: [],
     loading: false,
     error: null,
+    initialSearchTerm: '',
   };
 
-  componentDidMount() {
-    this.loadItems();
+  async componentDidMount() {
+    const savedSearchTerm = searchStorage.get();
+
+    if (savedSearchTerm) {
+      this.setState({ initialSearchTerm: savedSearchTerm });
+      await this.searchItems(savedSearchTerm);
+    } else {
+      await this.loadAllItems();
+    }
   }
 
-  loadItems = async () => {
+  loadAllItems = async () => {
     this.setState({ loading: true, error: null });
     try {
       const items = await itemsApi.getAll();
@@ -34,17 +44,21 @@ class Home extends Component<object, HomePageState> {
     }
   };
 
-  handleSearch = async (searchTerm: string) => {
+  searchItems = async (searchTerm: string) => {
     this.setState({ loading: true, error: null });
     try {
       const items = await itemsApi.search(searchTerm);
       this.setState({ items, loading: false });
     } catch (error) {
       this.setState({
-        error: 'Search failed',
+        error: 'Search failed. Please try again.',
         loading: false,
       });
     }
+  };
+
+  handleSearch = async (searchTerm: string) => {
+    await this.searchItems(searchTerm);
   };
 
   render() {

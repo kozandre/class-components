@@ -1,11 +1,11 @@
-// features/error-handling/components/error-boundary/error-boundary.tsx
 import { Component, type ErrorInfo } from 'react';
+
+import FallbackUI from './fallback-ui';
 
 import type {
   ErrorBoundaryProps,
   ErrorBoundaryState,
 } from './error-boundary.types';
-import FallbackUI from './fallback-ui';
 
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
