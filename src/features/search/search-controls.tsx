@@ -19,6 +19,7 @@ class SearchControls extends Component<
 
     this.state = {
       searchValue: savedTerm || '',
+      lastSearchValue: '',
       isSearching: false,
     };
   }
@@ -29,6 +30,11 @@ class SearchControls extends Component<
 
   handleSearch = () => {
     const trimmedValue = this.state.searchValue.trim();
+
+    if (trimmedValue === this.state.lastSearchValue) {
+      return;
+    }
+
     if (trimmedValue) {
       const savedTerm = searchStorage.get();
 
@@ -38,6 +44,7 @@ class SearchControls extends Component<
 
       this.setState({ isSearching: true });
       this.props.onSearch(trimmedValue);
+      this.setState({ lastSearchValue: trimmedValue });
       this.setState({ isSearching: false });
     }
   };

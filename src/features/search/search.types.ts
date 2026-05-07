@@ -11,6 +11,7 @@ export interface SearchIconProps {
 
 export interface SearchControlsState {
   searchValue: string;
+  lastSearchValue: string;
   isSearching: boolean;
 }
 
