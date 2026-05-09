@@ -1,16 +1,16 @@
-import ErrorTestButton from '@features/error-handling/error-test-button';
+import ErrorTestButton from '@features/error-handling/error-test-button/error-test-button';
 
 import ResultsSection from '@features/results/results-section';
 
-import SearchControls from '@features/search/search-controls';
-
-import { itemsApi } from '@features/services/api/items-api';
+import SearchControls from '@features/search/search-controls/search-controls';
 
 import { searchStorage } from '@features/services/storage/search-storage';
 
 import { Component } from 'react';
 
 import type { HomePageState } from './home.types';
+
+import { itemsApi } from '@/features/services/api/items-api/items-api';
 
 class Home extends Component<object, HomePageState> {
   state = {

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import type { ErrorTestButtonProps } from './error-boundary.types';
+import type { ErrorTestButtonProps } from '../error-handling.types';
 
 class ErrorTestButton extends Component<ErrorTestButtonProps> {
   state = {

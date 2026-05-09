@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import type { SearchIconProps } from './search.types';
+import type { SearchIconProps } from '../search.types';
 
 class SearchIcon extends Component<SearchIconProps> {
   render() {

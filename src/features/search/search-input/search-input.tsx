@@ -1,8 +1,8 @@
 import { Component } from 'react';
 
-import SearchIcon from './search-icon';
+import SearchIcon from '../search-icon/search-icon';
 
-import type { SearchInputProps } from './search.types';
+import type { SearchInputProps } from '../search.types';
 
 class SearchInput extends Component<SearchInputProps> {
   handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

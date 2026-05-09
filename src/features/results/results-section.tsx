@@ -1,8 +1,8 @@
+import ItemList from '@items/item-list/item-list';
+
+import LoadingSpinner from '@ui/loading-spinner/loading-spinner';
+
 import { Component } from 'react';
-
-import ItemList from '../items/item-list/item-list';
-
-import LoadingSpinner from '../ui/loading-spinner/loading-spinner';
 
 import type { ResultsSectionProps } from './results.types';
 

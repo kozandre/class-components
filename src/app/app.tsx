@@ -1,6 +1,6 @@
-import ErrorBoundary from '@features/error-handling/error-boundary';
+import ErrorBoundary from '@features/error-handling/error-boundary/error-boundary';
 
-import FallbackUI from '@features/error-handling/fallback-ui';
+import FallbackUI from '@features/error-handling/fallback-ui/fallback-ui';
 
 import Home from '@pages/home';
 

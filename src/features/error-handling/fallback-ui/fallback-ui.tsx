@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import type { FallbackUIProps } from './error-boundary.types';
+import type { FallbackUIProps } from '../error-handling.types';
 
 class FallbackUI extends Component<FallbackUIProps> {
   handleResetClick = () => {

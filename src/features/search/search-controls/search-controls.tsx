@@ -1,12 +1,12 @@
+import { searchStorage } from '@services/storage/search-storage';
+
+import Button from '@ui/button/button';
+
 import { Component } from 'react';
 
-import SearchInput from './search-input';
+import SearchInput from '../search-input/search-input';
 
-import { searchStorage } from '../services/storage/search-storage';
-
-import Button from '../ui/button/button';
-
-import type { SearchControlsProps, SearchControlsState } from './search.types';
+import type { SearchControlsProps, SearchControlsState } from '../search.types';
 
 class SearchControls extends Component<
   SearchControlsProps,
