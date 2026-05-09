@@ -6,8 +6,8 @@ import { ItemList } from './item-list';
 
 import type { Item } from '../item.types';
 
-vi.mock('../item-card/item-card', () => ({
-  default: ({ item }: { item: Item }) => (
+vi.mock('../item-card', () => ({
+  ItemCard: ({ item }: { item: Item }) => (
     <div data-testid="mock-item-card">
       <h3>{item.name}</h3>
       <p>{item.description}</p>
