@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-class LoadingSpinner extends Component {
+export class LoadingSpinner extends Component {
   render() {
     return (
       <div
@@ -12,5 +12,3 @@ class LoadingSpinner extends Component {
     );
   }
 }
-
-export default LoadingSpinner;

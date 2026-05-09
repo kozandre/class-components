@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import { describe, expect, it, vi } from 'vitest';
 
-import ItemList from './item-list';
+import { ItemList } from './item-list';
 
 import type { Item } from '../item.types';
 

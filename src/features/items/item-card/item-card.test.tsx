@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import { describe, expect, it } from 'vitest';
 
-import ItemCard from './item-card';
+import { ItemCard } from './item-card';
 
 describe('Item Card Component', () => {
   it('renders item name and description', () => {

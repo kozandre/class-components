@@ -1,13 +1,16 @@
 import { Component, type ErrorInfo } from 'react';
 
-import FallbackUI from '../fallback-ui/fallback-ui';
+import { FallbackUI } from '../fallback-ui';
 
 import type {
   ErrorBoundaryProps,
   ErrorBoundaryState,
 } from '../error-handling.types';
 
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+export class ErrorBoundary extends Component<
+  ErrorBoundaryProps,
+  ErrorBoundaryState
+> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = {
@@ -47,5 +50,3 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     return this.props.children;
   }
 }
-
-export default ErrorBoundary;

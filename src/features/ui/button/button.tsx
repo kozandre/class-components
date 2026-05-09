@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import type { ButtonProps } from './button.types';
 
-class Button extends Component<ButtonProps> {
+export class Button extends Component<ButtonProps> {
   render() {
     const {
       text = 'Click',
@@ -24,5 +24,3 @@ class Button extends Component<ButtonProps> {
     );
   }
 }
-
-export default Button;

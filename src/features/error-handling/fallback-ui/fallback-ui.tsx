@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import type { FallbackUIProps } from '../error-handling.types';
 
-class FallbackUI extends Component<FallbackUIProps> {
+export class FallbackUI extends Component<FallbackUIProps> {
   handleResetClick = () => {
     this.props.resetError?.();
   };
@@ -33,5 +33,3 @@ class FallbackUI extends Component<FallbackUIProps> {
     );
   }
 }
-
-export default FallbackUI;

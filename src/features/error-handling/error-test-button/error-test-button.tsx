@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import type { ErrorTestButtonProps } from '../error-handling.types';
 
-class ErrorTestButton extends Component<ErrorTestButtonProps> {
+export class ErrorTestButton extends Component<ErrorTestButtonProps> {
   state = {
     shouldThrow: false,
   };
@@ -31,5 +31,3 @@ class ErrorTestButton extends Component<ErrorTestButtonProps> {
     );
   }
 }
-
-export default ErrorTestButton;

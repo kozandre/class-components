@@ -14,6 +14,10 @@ export default defineConfig({
       '@ui': path.resolve(__dirname, './src/features/ui'),
       '@services': path.resolve(__dirname, './src/features/services'),
       '@items': path.resolve(__dirname, './src/features/items'),
+      '@error-handling': path.resolve(
+        __dirname,
+        './src/features/error-handling'
+      ),
     },
   },
   test: {

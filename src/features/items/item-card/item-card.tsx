@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import type { ItemCardProps } from '../item.types';
 
-class ItemCard extends Component<ItemCardProps> {
+export class ItemCard extends Component<ItemCardProps> {
   render() {
     const { name, description } = this.props.item;
     return (
@@ -16,5 +16,3 @@ class ItemCard extends Component<ItemCardProps> {
     );
   }
 }
-
-export default ItemCard;

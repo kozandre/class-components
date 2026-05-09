@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import type { SearchIconProps } from '../search.types';
 
-class SearchIcon extends Component<SearchIconProps> {
+export class SearchIcon extends Component<SearchIconProps> {
   render() {
     return (
       <svg
@@ -21,5 +21,3 @@ class SearchIcon extends Component<SearchIconProps> {
     );
   }
 }
-
-export default SearchIcon;

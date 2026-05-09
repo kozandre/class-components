@@ -34,5 +34,4 @@ class ApiClient {
   }
 }
 
-const apiClient = new ApiClient('https://swapi.dev/api');
-export default apiClient;
+export const apiClient = new ApiClient('https://swapi.dev/api');

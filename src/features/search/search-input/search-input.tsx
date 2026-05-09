@@ -1,10 +1,10 @@
 import { Component } from 'react';
 
-import SearchIcon from '../search-icon/search-icon';
+import { SearchIcon } from '../search-icon';
 
 import type { SearchInputProps } from '../search.types';
 
-class SearchInput extends Component<SearchInputProps> {
+export class SearchInput extends Component<SearchInputProps> {
   handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.props.onChange(e.target.value);
   };
@@ -35,5 +35,3 @@ class SearchInput extends Component<SearchInputProps> {
     );
   }
 }
-
-export default SearchInput;
