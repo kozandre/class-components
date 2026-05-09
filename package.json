@@ -10,6 +10,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format:fix": "prettier --write .",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "prepare": "husky",
     "deploy": "npm run build && npx gh-pages -d dist"
   },
@@ -22,10 +26,15 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
+    "@vitest/coverage-v8": "^4.1.5",
+    "@vitest/ui": "^4.1.5",
     "autoprefixer": "^10.5.0",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
@@ -38,6 +47,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^17.5.0",
     "husky": "^9.1.7",
+    "jsdom": "^29.1.1",
     "lint-staged": "^16.4.0",
     "postcss": "^8.5.13",
     "prettier": "^3.8.3",
@@ -45,6 +55,7 @@
     "tailwindcss": "^3.4.19",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
-    "vite": "^8.0.10"
+    "vite": "^8.0.10",
+    "vitest": "^4.1.5"
   }
 }
