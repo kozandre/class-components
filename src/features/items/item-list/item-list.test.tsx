@@ -42,4 +42,18 @@ describe('ItemList', () => {
     const items = screen.getAllByTestId('mock-item-card');
     expect(items).toHaveLength(3);
   });
+
+  it('renders fallback ui when there are no items', () => {
+    const mockItems: Item[] = [];
+
+    render(<ItemList items={mockItems} />);
+
+    const fallbackUi = screen.getByText(
+      'No items found. Try a different search term.'
+    );
+    expect(fallbackUi).toBeInTheDocument();
+
+    const itemCards = screen.queryAllByTestId('mock-item-card');
+    expect(itemCards).toHaveLength(0);
+  });
 });
