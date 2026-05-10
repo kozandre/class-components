@@ -30,7 +30,11 @@
       "@shared/*": ["./src/shared/*"],
       "@pages/*": ["./src/pages/*"],
       "@utils/*": ["./src/utils/*"],
-      "@types/*": ["./src/types/*"]
+      "@types/*": ["./src/types/*"],
+      "@ui/*": ["./src/features/ui/*"],
+      "@services/*": ["./src/features/services/*"],
+      "@items/*": ["./src/features/items/*"],
+      "@error-handling/*": ["./src/features/error-handling/*"]
     }
   },
   "include": ["src"]

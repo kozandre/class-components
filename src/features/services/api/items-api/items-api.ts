@@ -1,8 +1,10 @@
-import apiClient from './api-client';
+import { ApiClient } from '../api-client';
 
-import type { SwapiPerson, SwapiResponse } from './api.types';
+import type { SwapiPerson, SwapiResponse } from '../api.types';
 
-import type { Item } from '../../items/item.types';
+import type { Item } from '@items/item.types';
+
+const apiClient: ApiClient = new ApiClient('https://swapi.dev/api');
 
 export const itemsApi = {
   async getAll(): Promise<Item[]> {

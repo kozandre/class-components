@@ -1,14 +1,14 @@
+import { Button } from '@features/ui';
+
+import { searchStorage } from '@services/storage';
+
 import { Component } from 'react';
 
-import SearchInput from './search-input';
+import { SearchInput } from '../search-input';
 
-import { searchStorage } from '../services/storage/search-storage';
+import type { SearchControlsProps, SearchControlsState } from '../search.types';
 
-import Button from '../ui/button/button';
-
-import type { SearchControlsProps, SearchControlsState } from './search.types';
-
-class SearchControls extends Component<
+export class SearchControls extends Component<
   SearchControlsProps,
   SearchControlsState
 > {
@@ -69,5 +69,3 @@ class SearchControls extends Component<
     );
   }
 }
-
-export default SearchControls;

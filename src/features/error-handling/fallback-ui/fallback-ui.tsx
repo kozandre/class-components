@@ -1,8 +1,10 @@
 import { Component } from 'react';
 
-import type { FallbackUIProps } from './error-boundary.types';
+import type { FallbackUIProps } from '../error-handling.types';
 
-class FallbackUI extends Component<FallbackUIProps> {
+import { Button } from '@/features/ui';
+
+export class FallbackUI extends Component<FallbackUIProps> {
   handleResetClick = () => {
     this.props.resetError?.();
   };
@@ -21,17 +23,14 @@ class FallbackUI extends Component<FallbackUIProps> {
               'An unexpected error occurred in the application'}
           </p>
           {resetError && (
-            <button
+            <Button
               onClick={this.handleResetClick}
               className="rounded bg-red-600 px-6 py-2 text-white transition-colors hover:bg-red-700"
-            >
-              Reload Application
-            </button>
+              text="Reload Application"
+            />
           )}
         </div>
       </div>
     );
   }
 }
-
-export default FallbackUI;

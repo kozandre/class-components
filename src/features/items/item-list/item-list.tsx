@@ -1,10 +1,10 @@
 import { Component } from 'react';
 
-import ItemCard from './item-card';
+import { ItemCard } from '../item-card';
 
-import type { ItemListProps } from './item.types';
+import type { ItemListProps } from '../item.types';
 
-class ItemList extends Component<ItemListProps> {
+export class ItemList extends Component<ItemListProps> {
   render() {
     const { items } = this.props;
 
@@ -25,5 +25,3 @@ class ItemList extends Component<ItemListProps> {
     );
   }
 }
-
-export default ItemList;

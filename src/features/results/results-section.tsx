@@ -1,12 +1,12 @@
+import { ItemList } from '@features/items';
+
+import { LoadingSpinner } from '@features/ui';
+
 import { Component } from 'react';
-
-import ItemList from '../items/item-list';
-
-import LoadingSpinner from '../ui/loading-spinner/loading-spinner';
 
 import type { ResultsSectionProps } from './results.types';
 
-class ResultsSection extends Component<ResultsSectionProps> {
+export class ResultsSection extends Component<ResultsSectionProps> {
   render() {
     const { items, loading, error } = this.props;
 
@@ -29,5 +29,3 @@ class ResultsSection extends Component<ResultsSectionProps> {
     );
   }
 }
-
-export default ResultsSection;

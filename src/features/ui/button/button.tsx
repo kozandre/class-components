@@ -2,14 +2,14 @@ import { Component } from 'react';
 
 import type { ButtonProps } from './button.types';
 
-class Button extends Component<ButtonProps> {
+export class Button extends Component<ButtonProps> {
   render() {
     const {
       text = 'Click',
       onClick,
       type = 'button',
       disabled = false,
-      className = '',
+      className = 'rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-3 font-semibold text-white shadow-md transition-all hover:from-blue-700 hover:to-blue-800 hover:shadow-lg active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100',
     } = this.props;
 
     return (
@@ -17,12 +17,10 @@ class Button extends Component<ButtonProps> {
         type={type}
         onClick={onClick}
         disabled={disabled}
-        className={`rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-3 font-semibold text-white shadow-md transition-all hover:from-blue-700 hover:to-blue-800 hover:shadow-lg active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100 ${className}`}
+        className={className}
       >
         {text}
       </button>
     );
   }
 }
-
-export default Button;

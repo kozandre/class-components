@@ -1,8 +1,8 @@
 import { Component } from 'react';
 
-import type { SearchIconProps } from './search.types';
+import type { SearchIconProps } from '../search.types';
 
-class SearchIcon extends Component<SearchIconProps> {
+export class SearchIcon extends Component<SearchIconProps> {
   render() {
     return (
       <svg
@@ -10,6 +10,7 @@ class SearchIcon extends Component<SearchIconProps> {
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
+        data-testid="search-icon"
       >
         <path
           strokeLinecap="round"
@@ -21,5 +22,3 @@ class SearchIcon extends Component<SearchIconProps> {
     );
   }
 }
-
-export default SearchIcon;
