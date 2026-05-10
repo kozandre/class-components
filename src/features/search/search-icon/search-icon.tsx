@@ -10,6 +10,7 @@ export class SearchIcon extends Component<SearchIconProps> {
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
+        data-testid="search-icon"
       >
         <path
           strokeLinecap="round"
