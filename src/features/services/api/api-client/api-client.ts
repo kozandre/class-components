@@ -1,4 +1,4 @@
-class ApiClient {
+export class ApiClient {
   private baseURL: string;
 
   constructor(baseURL: string) {
@@ -33,5 +33,3 @@ class ApiClient {
     return response.json();
   }
 }
-
-export const apiClient = new ApiClient('https://swapi.dev/api');
