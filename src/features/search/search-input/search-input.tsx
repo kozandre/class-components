@@ -23,7 +23,11 @@ export class SearchInput extends Component<SearchInputProps> {
           <SearchIcon />
         </div>
 
+        <label htmlFor="search" className="sr-only">
+          Search
+        </label>
         <input
+          id="search"
           type="search"
           value={value}
           onChange={this.handleChange}
